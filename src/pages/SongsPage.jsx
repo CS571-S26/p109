@@ -6,8 +6,7 @@ export default function SongsPage() {
     <div className="w-100 h-100 d-flex justify-content-center align-items-center">
       <Card className='m-4 p-2'>
         <Card.Body className='text-center'>
-          <h2>About</h2> 
-          <p>Example declarative routing with react-router-dom.</p>
+          <h2>Songs</h2> 
         </Card.Body>
       </Card>
     </div>
