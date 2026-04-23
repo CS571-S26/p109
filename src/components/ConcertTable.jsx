@@ -1,8 +1,9 @@
-import { Container, Card, Table, Button } from "react-bootstrap";
-import tourDates from '../data/tourDates.js';
+import { Container, Card, Table } from "react-bootstrap";
 
-export default function TourTable() {
+export default function ConcertTable(props) {
     return <Container className="mt-5">
+        <h5 className="text-center pb-2">See countdown for a different concert</h5>
+
         <Card >
             <Table striped>
                 <thead>
@@ -13,13 +14,13 @@ export default function TourTable() {
                     </tr>
                 </thead>
 
+                {/* TODO: add click event on rows */}
                 <tbody>
-                    {tourDates.map((concert) => (
-                        <tr key={concert.id}> {/* TODO: open ticket link in new tab */}
+                    {props.tourDates.map((concert) => (
+                        <tr key={concert.id}>
                             <td>{concert.date}</td>
                             <td>{concert.city}, {concert.country}</td>
                             <td>{concert.venue}</td>
-                            <td><Button variant="primary" size="sm" href={concert.ticketLink}>Buy Tickets</Button></td>
                         </tr>
                     ))}
                 </tbody>
