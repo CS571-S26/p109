@@ -1,7 +1,14 @@
 import { Container, Card, Table, Button } from "react-bootstrap";
 import tourDates from '../data/tourDates.js';
+import { useNavigate } from "react-router-dom";
 
-export default function TourTable() {
+export default function TourTable(props) {
+    const navigate = useNavigate();
+
+    const navigateToConcertPage = (concertDetails) => {
+        navigate('../concert', {state: concertDetails});
+    }
+
     return <Container className="mt-5">
         <Card >
             <Table striped>
@@ -14,8 +21,8 @@ export default function TourTable() {
                 </thead>
 
                 <tbody>
-                    {tourDates.map((concert) => (
-                        <tr key={concert.id}>
+                    {props.filteredDates.map((concert) => (
+                        <tr key={concert.id} onClick={() => navigateToConcertPage(concert)}>
                             <td>{concert.date}</td>
                             <td>{concert.city}, {concert.country}</td>
                             <td>{concert.venue}</td>

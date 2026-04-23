@@ -1,12 +1,15 @@
 import '../App.css'
-import { Row, Col, Form, Container } from 'react-bootstrap';
-import { Card } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap';
 import ConcertTable from '../components/ConcertTable';
 import CountdownTimer from '../components/CountdownTimer';
 import tourDates from '../data/tourDates.js';
 import ConcertDetails from '../components/ConcertDetails';
+import { useLocation } from 'react-router-dom';
 
 export default function ConcertPage() {
+  const location = useLocation();
+  const concert = location.state;
+
   return (
     <div className="w-100 d-flex flex-column align-items-center">
       <div className="text-center">
@@ -18,13 +21,11 @@ export default function ConcertPage() {
 
       <Col md={9} lg={8} xl={6}>
         <Row>
-          {/* TODO: pass the concert date for a specific concert. */}
-          <CountdownTimer targetDate={new Date("2026-05-22T22:00:00")}/> 
+          <CountdownTimer targetDate={new Date(concert.date)}/> 
         </Row>
 
-        {/* TODO: pass concert to ConcertDetails. */}
         <Row className='text-center mt-4'>
-            <ConcertDetails />
+            <ConcertDetails concert={concert}/>
         </Row>
 
         <Row className='mt-3'> {/* TODO: fix width on small screen */}

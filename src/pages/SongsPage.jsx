@@ -26,8 +26,8 @@ export default function SongsPage() {
 
       <Col md={9} lg={8} xl={6}>
         <Row className='mt-3'> {/* TODO: fix width on small screen, form should be completeable by keyboard (search on enter?) */}
-          <Form.Label htmlFor='search'>Search songs by title or artist(s)</Form.Label>
-          <Form.Control id='search' value={search} onChange={(event) => setSearch(event.target.value)}></Form.Control>
+          <Form.Label htmlFor='search'></Form.Label>
+          <Form.Control id='search' value={search} onChange={(event) => setSearch(event.target.value)} placeholder='Search songs by title or artist(s)'></Form.Control>
         </Row>
 
         <SongsTable tracklist={filteredTracklist}/>
