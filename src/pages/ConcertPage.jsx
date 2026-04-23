@@ -5,10 +5,12 @@ import CountdownTimer from '../components/CountdownTimer';
 import tourDates from '../data/tourDates.js';
 import ConcertDetails from '../components/ConcertDetails';
 import { useLocation } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function ConcertPage() {
   const location = useLocation();
-  const concert = location.state;
+  const concert = location.state ?? tourDates[0];
+  const [selectedConcert, setSelectedConcert] = useState(concert);
 
   return (
     <div className="w-100 d-flex flex-column align-items-center">
@@ -21,15 +23,15 @@ export default function ConcertPage() {
 
       <Col md={9} lg={8} xl={6}>
         <Row>
-          <CountdownTimer targetDate={new Date(concert.date)}/> 
+          <CountdownTimer targetDate={new Date(selectedConcert.date)}/> 
         </Row>
 
         <Row className='text-center mt-4'>
-            <ConcertDetails concert={concert}/>
+            <ConcertDetails concert={selectedConcert}/>
         </Row>
 
         <Row className='mt-3'> {/* TODO: fix width on small screen */}
-          <ConcertTable tourDates={tourDates}/>
+          <ConcertTable tourDates={tourDates} selectedConcert={selectedConcert} onSelectConcert={setSelectedConcert}/>
         </Row>
       </Col>
     </div>

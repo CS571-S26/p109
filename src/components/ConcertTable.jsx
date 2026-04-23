@@ -14,10 +14,14 @@ export default function ConcertTable(props) {
                     </tr>
                 </thead>
 
-                {/* TODO: add click event on rows */}
                 <tbody>
                     {props.tourDates.map((concert) => (
-                        <tr key={concert.id}>
+                        <tr key={concert.id} onClick={() => {
+                                props.onSelectConcert(concert);
+                                window.scrollTo({top: 0});
+                            }}
+                            style={{cursor: 'pointer'}}
+                        >
                             <td>{concert.date}</td>
                             <td>{concert.city}, {concert.country}</td>
                             <td>{concert.venue}</td>
