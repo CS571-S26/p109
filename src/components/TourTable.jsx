@@ -15,11 +15,11 @@ export default function TourTable() {
 
                 <tbody>
                     {tourDates.map((concert) => (
-                        <tr key={concert.id}> {/* TODO: open ticket link in new tab */}
+                        <tr key={concert.id}>
                             <td>{concert.date}</td>
                             <td>{concert.city}, {concert.country}</td>
                             <td>{concert.venue}</td>
-                            <td><Button variant="primary" size="sm" href={concert.ticketLink}>Buy Tickets</Button></td>
+                            <td><Button variant="primary" size="sm" href={concert.ticketLink} target="_blank" rel="noopener noreferrer">Buy Tickets</Button></td>
                         </tr>
                     ))}
                 </tbody>

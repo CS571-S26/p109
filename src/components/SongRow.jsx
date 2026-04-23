@@ -7,23 +7,27 @@ export default function SongRow(props) {
     const [openLyrics, setOpenLyrics] = useState(null);
 
     const toggleLyrics = (index) => {
-        setOpenLyrics(openLyrics === index ? null : index)
+        setOpenLyrics(openLyrics === index ? null : index);
+
+        // TODO: add Genius API call to get lyrics.
     }
 
     return (<>
-        {/* TODO: open link in a new tab */}
         <tr>
-            <td>{props.song.title}</td>
+            <td>
+                {props.song.title} <br/>
+                <span> By {props.song.artists.join(', ')}</span>
+            </td>
             <td>{props.song.time}</td>
             <td><Button variant="link" onClick={() => toggleLyrics(props.song.id)}>View</Button></td>
             <td>
-                <Button variant="link" href={props.song.spotifyLink}>
+                <Button variant="link" href={props.song.spotifyLink} target="_blank" rel="noopener noreferrer">
                     <BsSpotify size={25} color="#1DB954"></BsSpotify>
                 </Button>
-                <Button variant="link" href={props.song.appleMusicLink}>
+                <Button variant="link" href={props.song.appleMusicLink} target="_blank" rel="noopener noreferrer">
                     <BsAppleMusic size={25} color="#ff4e6b"></BsAppleMusic>
                 </Button>
-                <Button variant="link" href={props.song.youtubeLink}>
+                <Button variant="link" href={props.song.youtubeLink} target="_blank" rel="noopener noreferrer">
                     <BsYoutube size={25} color="#FF0000"></BsYoutube>
                 </Button>
             </td>
