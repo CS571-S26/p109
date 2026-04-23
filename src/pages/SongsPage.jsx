@@ -1,7 +1,7 @@
 import '../App.css';
-import { Row, Col, Form, Container } from 'react-bootstrap';
+import { Row, Col, Form } from 'react-bootstrap';
 import SongsTable from '../components/SongsTable';
-
+import tracklist from '../data/tracklist.js';
 
 export default function SongsPage() {
   return (
@@ -13,12 +13,12 @@ export default function SongsPage() {
       </div>
 
       <Col md={9} lg={8} xl={6}>
-        <Row className='mt-3'> {/* TODO: fix width on small screen */}
+        <Row className='mt-3'> {/* TODO: fix width on small screen, form should be completeable by keyboard (search on enter?) */}
           <Form.Label htmlFor='search'>Search</Form.Label>
           <Form.Control id='search'></Form.Control>
         </Row>
 
-        <SongsTable />
+        <SongsTable tracklist={tracklist}/>
       </Col>
     </div>
   )

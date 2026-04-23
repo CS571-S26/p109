@@ -1,6 +1,7 @@
 const tracklist = [
     {
-        song: "NUEVAYoL",
+        id: 0,
+        title: "NUEVAYoL",
         artists: [
             "Bad Bunny"
         ],
@@ -10,7 +11,8 @@ const tracklist = [
         youtubeLink: "https://youtu.be/zAfrPjTvSNs?si=L508lLrz3cUVFEIJ"
     },
     {
-        song: "VOY A LLeVARTE PA PR",
+        id: 1,
+        title: "VOY A LLeVARTE PA PR",
         artists: [
             "Bad Bunny"
         ],
@@ -20,7 +22,8 @@ const tracklist = [
         youtubeLink: "https://youtu.be/X2MGCIDOMZ4?si=9ioQkp-SQ0BrwbDs"
     },
     {
-        song: "BAILE INoLVIDABLE",
+        id: 2,
+        title: "BAILE INoLVIDABLE",
         artists: [
             "Bad Bunny"
         ],
@@ -30,7 +33,8 @@ const tracklist = [
         youtubeLink: "https://youtu.be/2Y4zvxK0wYM?si=toR7Zb9z6p30fXo9"
     },
     {
-        song: "PERFuMITO NUEVO",
+        id: 3,
+        title: "PERFuMITO NUEVO",
         artists: [
             "Bad Bunny",
             "RaiNao"
@@ -41,7 +45,8 @@ const tracklist = [
         youtubeLink: "https://youtu.be/XphyMFdyyEg?si=UsrruMRHB2GGeeqT"
     },
     {
-        song: "WELTiTA",
+        id: 4,
+        title: "WELTiTA",
         artists: [
             "Bad Bunny",
             "Chuwi"
@@ -52,7 +57,8 @@ const tracklist = [
         youtubeLink: "https://youtu.be/hitCWMxsMi4?si=lbNYokgIFS2QTVLU"
     },
     {
-        song: "VeLDÁ",
+        id: 5,
+        title: "VeLDÁ",
         artists: [
             "Bad Bunny",
             "Omar Courtz",
@@ -64,7 +70,8 @@ const tracklist = [
         youtubeLink: "https://youtu.be/yNEpyU3PnDI?si=27rvxpkdg6C-33PQ"
     },
     {
-        song: "EL CLúB",
+        id: 6,
+        title: "EL CLúB",
         artists: [
             "Bad Bunny"
         ],
@@ -74,7 +81,8 @@ const tracklist = [
         youtubeLink: "https://youtu.be/xDWLZ8ML52k?si=sceL7haMSANQ9tp8"
     },
     {
-        song: "KETU TeCRÉ",
+        id: 7,
+        title: "KETU TeCRÉ",
         artists: [
             "Bad Bunny"
         ],
@@ -84,7 +92,8 @@ const tracklist = [
         youtubeLink: "https://youtu.be/oSGgWlzZ9ko?si=jv1XTufIyAr_y3Id"
     },
     {
-        song: "BOKeTE",
+        id: 8,
+        title: "BOKeTE",
         artists: [
             "Bad Bunny"
         ],
@@ -94,7 +103,8 @@ const tracklist = [
         youtubeLink: "https://youtu.be/snvw6iG-GaY?si=A0-oeWcwWC2wgvyn"
     },
     {
-        song: "KLOuFRENS",
+        id: 9,
+        title: "KLOuFRENS",
         artists: [
             "Bad Bunny"
         ],
@@ -104,7 +114,8 @@ const tracklist = [
         youtubeLink: "https://youtu.be/3af9KM3Eq-E?si=SRKaHKqg30oyfNp5"
     },
     {
-        song: "TURiSTA",
+        id: 10,
+        title: "TURiSTA",
         artists: [
             "Bad Bunny"
         ],
@@ -114,7 +125,8 @@ const tracklist = [
         youtubeLink: "https://youtu.be/z608DuScKjs?si=mqtgH2tpBTv9WaXj"
     },
     {
-        song: "CAFé CON RON",
+        id: 11,
+        title: "CAFé CON RON",
         artists: [
             "Bad Bunny",
             "Los Pleneros de la Cresta"
@@ -125,7 +137,8 @@ const tracklist = [
         youtubeLink: "https://youtu.be/bk2GZWHV3o4?si=YhpG-q1VqmxLAjRa"
     },
     {
-        song: "PIToRRO DE COCO",
+        id: 12,
+        title: "PIToRRO DE COCO",
         artists: [
             "Bad Bunny"
         ],
@@ -135,7 +148,8 @@ const tracklist = [
         youtubeLink: "https://youtu.be/ms4ETz5RXIY?si=adlQ-Cr-VM4Truqi"
     },
     {
-        song: "LO QUE LE PASÓ A HAWAii",
+        id: 13,
+        title: "LO QUE LE PASÓ A HAWAii",
         artists: [
             "Bad Bunny"
         ],
@@ -145,7 +159,8 @@ const tracklist = [
         youtubeLink: "https://youtu.be/uvfDaZ4ZT80?si=TXuiaIo-9jjfYryl"
     },
     {
-        song: "EoO",
+        id: 14,
+        title: "EoO",
         artists: [
             "Bad Bunny"
         ],
@@ -155,7 +170,8 @@ const tracklist = [
         youtubeLink: "https://youtu.be/myDIeOjqQos?si=gItHIeO3ti0Y5nIG"
     },
     {
-        song: "DtMF",
+        id: 15,
+        title: "DtMF",
         artists: [
             "Bad Bunny"
         ],
@@ -165,7 +181,8 @@ const tracklist = [
         youtubeLink: "https://youtu.be/v9T_MGfzq7I?si=3JOZnVdQWdYDTklv"
     },
     {
-        song: "LA MuDANZA",
+        id: 16,
+        title: "LA MuDANZA",
         artists: [
             "Bad Bunny"
         ],
