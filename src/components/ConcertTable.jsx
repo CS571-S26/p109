@@ -2,7 +2,7 @@ import { Container, Card, Table } from "react-bootstrap";
 
 export default function ConcertTable(props) {
     return <Container className="mt-5">
-        <h5 className="text-center pb-2">See countdown for a different concert</h5>
+        <h5 className="text-center pb-2 table-title">See countdown for a different concert</h5>
 
         <Card >
             <Table striped>
@@ -21,6 +21,9 @@ export default function ConcertTable(props) {
                                 window.scrollTo({top: 0});
                             }}
                             style={{cursor: 'pointer'}}
+                            onKeyDown={(e) => e.key === 'Enter' && props.onSelectConcert(concert)}
+                            tabIndex={0}
+                            role="Button"
                         >
                             <td>{concert.date}</td>
                             <td>{concert.city}, {concert.country}</td>

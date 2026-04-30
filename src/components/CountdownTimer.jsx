@@ -11,10 +11,9 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
     
     // Render a countdown
     return (
-        // TODO: add styling.
         <Col>
             <Row>
-                <div className="d-flex align-items-center justify-content-center gap-3 my-4">
+                <div className="d-flex align-items-center justify-content-center gap-3 my-4 timer">
                     <div className="text-center">
                         <div style={{fontSize: 'clamp(2rem, 10vw, 5rem)', fontWeight: 'bold'}}>{pad(days)}</div>
                         <div className="text-uppercase small">Days</div>
@@ -48,7 +47,6 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
 
 export default function CountdownTimer({targetDate}) {
     return (
-        // TODO: pass the date dynamically
         <Countdown date={new Date(targetDate)} renderer={renderer}></Countdown>
     )
 }

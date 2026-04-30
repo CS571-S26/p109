@@ -22,11 +22,27 @@ export default function TourTable(props) {
 
                 <tbody>
                     {props.filteredDates.map((concert) => (
-                        <tr key={concert.id} onClick={() => navigateToConcertPage(concert)} style={{cursor: 'pointer'}}>
+                        <tr key={concert.id} 
+                            onClick={() => navigateToConcertPage(concert)} 
+                            style={{cursor: 'pointer'}}
+                            onKeyDown={(e) => e.key === 'Enter' && navigateToConcertPage(concert)}
+                            tabIndex={0}
+                            role="Button"
+                        >
                             <td>{concert.date}</td>
                             <td>{concert.city}, {concert.country}</td>
                             <td>{concert.venue}</td>
-                            <td><Button variant="primary" size="sm" href={concert.ticketLink} target="_blank" rel="noopener noreferrer">Buy Tickets</Button></td>
+                            <td>
+                                <Button 
+                                    variant="primary" 
+                                    size="sm" 
+                                    href={concert.ticketLink} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="ticket-btn"
+                                >
+                                    Buy Tickets
+                                </Button></td>
                         </tr>
                     ))}
                 </tbody>

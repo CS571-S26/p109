@@ -6,6 +6,7 @@ import tourDates from '../data/tourDates.js';
 import ConcertDetails from '../components/ConcertDetails';
 import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
+import Header from '../components/Header.jsx';
 
 export default function ConcertPage() {
   const location = useLocation();
@@ -14,14 +15,9 @@ export default function ConcertPage() {
 
   return (
     <div className="w-100 d-flex flex-column align-items-center">
-      <div className="text-center">
-        <h2>BAD BUNNY</h2>
-        <h1>DeBÍ TiRAR MáS FOToS</h1>
-        <h3>World Tour</h3>
-      </div>
+      <Header />
 
-
-      <Col md={9} lg={8} xl={6}>
+      <Col md={9} lg={8} xl={6} className='counter-details'>
         <Row>
           <CountdownTimer targetDate={new Date(selectedConcert.date)}/> 
         </Row>
@@ -30,7 +26,7 @@ export default function ConcertPage() {
             <ConcertDetails concert={selectedConcert}/>
         </Row>
 
-        <Row className='mt-3'> {/* TODO: fix width on small screen */}
+        <Row className='mt-3'>
           <ConcertTable tourDates={tourDates} selectedConcert={selectedConcert} onSelectConcert={setSelectedConcert}/>
         </Row>
       </Col>

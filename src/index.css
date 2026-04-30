@@ -1,0 +1,95 @@
+:root {
+    --color-light-text: #f5f0e8;
+    --color-dark-text: #1a1a1a;
+    --color-dark-green: #3a5332;
+    --color-dark-green-light: #7a9e6e;
+    --color-beige: #c8c0a8;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),url('./assets/album-cover.png');
+    background-position: left;
+    background-attachment: fixed;
+    background-color: #3a5332;
+    color: var(--color-dark-text);
+    font-family: 'Georgia', serif;
+}
+
+.heading {
+    width: 75%;
+    color: var(--color-light-text);
+    text-align: center;
+    padding: 3rem 1rem;
+    letter-spacing: 0.1em;
+}
+
+.heading, .counter-details {
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.table {
+    color: var(--color-dark-text) !important;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: rgba(0, 0, 0, 0.05) !important;
+    color: var(--color-dark-text);
+}
+
+.table > thead > tr > th {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--color-beige) !important;
+}
+
+.btn-primary {
+  background-color: var(--color-light-text) !important;
+  border-color: var(--color-dark-green) !important;
+  border-radius: 10px !important;
+  letter-spacing: 1px;
+  color: var(--color-dark-text) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-dark-green-light) !important;
+  color: var(--color-dark-text) !important;
+}
+
+.btn-primary:focus {
+  outline: 4px solid var(--color-dark-green-light);
+  border-radius: 4px;
+}
+
+.ticket-btn {
+    background-color: var(--color-dark-green) !important;
+    border-color: var(--color-dark-green) !important;
+    border-radius: 10px !important;
+    letter-spacing: 1px;
+    color: var(--color-light-text) !important;
+}
+
+nav a {
+  color: var(--color-light-text) !important;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+nav a:hover {
+  background-color: var(--color-dark-green-light);
+  color: var(--color-dark-text) !important;
+}
+
+nav a:focus {
+  outline: 2px solid var(--color-light-text);
+  border-radius: 4px;
+  padding: 3px;
+}
+
+.details-text, .timer, .table-title {
+    color: var(--color-light-text);
+}
