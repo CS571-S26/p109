@@ -3,13 +3,21 @@ import { Container, Card, Table, Button, Collapse } from "react-bootstrap";
 import { BsSpotify, BsAppleMusic, BsYoutube, BsClock } from "react-icons/bs";
 
 export default function SongRow(props) {
-    // TODO: only allow one lyrics section to be open at a time
     const [openLyrics, setOpenLyrics] = useState(null);
 
     const toggleLyrics = (index) => {
         setOpenLyrics(openLyrics === index ? null : index);
+    }
 
-        // TODO: add Genius API call to get lyrics.
+    const parseLyrics = (lyrics) => {
+        // Split lyrics on [ to create sections.
+        const sections = lyrics.split(/(?=\[)/).filter(Boolean);
+        return sections.map((section) => {
+            const titleMatch = section.match(/^\[(.+?)\]/);
+            const title = titleMatch ? titleMatch[1] : '';
+            const body = section.replace(/^\[.+?\]/, '').trim();
+            return { title, body };
+        })
     }
 
     return (<>
@@ -33,11 +41,24 @@ export default function SongRow(props) {
             </td>
         </tr>
 
-        {/* TODO: get song lyrics using Genius API */}
         <tr>
-            <td>
+            <td colSpan={4}>
                 <Collapse in={openLyrics === props.song.id}>
-                    <div>TODO: Get song lyrics from Genius API</div>
+                    <div className="p-3">
+                        {props.song.lyrics 
+                        ? (
+                            <div className="lyrics-grid">
+                                {parseLyrics(props.song.lyrics).map((section, i) => (
+                                    <div key={i} className="lyrics-section">
+                                        <p className="lyrics-title">[{section.title}]</p>
+                                        <p className="lyrics-body">{section.body}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        )
+                        : "There are currently no lyrics to show"
+                        }
+                    </div>
                 </Collapse>
             </td>
         </tr>

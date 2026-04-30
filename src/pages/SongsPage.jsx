@@ -22,7 +22,7 @@ export default function SongsPage() {
       <Header />
 
       <Col md={9} lg={8} xl={6}>
-        <Row className='mt-3 px-4'> {/* TODO: form should be completeable by keyboard (search on enter?) */}
+        <Row className='mt-3 px-4'>
           <Form.Label htmlFor='search'></Form.Label>
           <Form.Control id='search' value={search} onChange={(event) => setSearch(event.target.value)} placeholder='Search songs by title or artist(s)'></Form.Control>
         </Row>

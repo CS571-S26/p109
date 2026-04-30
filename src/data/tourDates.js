@@ -1,4 +1,3 @@
-// TODO: update id to be more specific. e.g., barcelona_1, barcelona_2, etc.
 const tourDates = [
     {
         id: 0,
